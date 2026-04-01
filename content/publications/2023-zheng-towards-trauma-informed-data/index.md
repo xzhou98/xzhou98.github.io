@@ -5,7 +5,7 @@ authors:
   - Wenqi Zheng
   - Emma Walquist
   - Isha Datey
-  - Xiangyu Zhou
+  - me
   - Kelly Berishaj
   - Melissa Mcdonald
   - Michele Parkhill
@@ -18,7 +18,7 @@ hugoblox:
 publication_types:
   - paper-conference
 publication: Adjunct Proceedings of the 36th Annual ACM Symposium on User
-  Interface Software and Technology
+  Interface Software and Technology (UIST-23)
 publication_short: ""
 links:
   - type: source

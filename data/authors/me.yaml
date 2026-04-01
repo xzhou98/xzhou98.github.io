@@ -1,116 +1,106 @@
-schema: hugoblox/author/v1
-slug: me
+schema: "hugoblox/author/v1"
+slug: "me"
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
+  display: "Xiangyu Zhou"
+  given: "Xiangyu"
+  family: "Zhou"
+  alternate: "周翔宇"
+  pronunciation: ""
+  pronouns: "he/him"
 postnominals:
-  - PhD
-  - MIEEE
+  - "PhD"
+  - "Candidate"
 status:
-  icon: "☕️"
-role: Senior AI Research Scientist
-bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
-
-affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
-
+  icon: "👨‍💻"
+role: "Graduate Research Assistant"
+bio: "Hi there! 👋  I’m a Ph.D. candidate in Computer Science at Wayne State University, where I spend most of my time studying how to make large language models more trustworthy, robust, and safe. My research sits at the intersection of trustworthy AI, large language model safety, and reasoning, with a focus on understanding how modern models can be manipulated, misaligned, or made to forget in more precise ways.  Since joining the Trustworthy AI Lab, I have been working on problems such as jailbreak vulnerabilities, adversarial in-context learning, safety alignment, and LLM unlearning. My work explores both the weaknesses of frontier language and reasoning models and practical ways to improve their reliability under real-world conditions.  More recently, I have been studying how reasoning traces and conversational context can steer model behavior, as well as how to align models more effectively without hurting their general usefulness. I am also interested in targeted unlearning: removing unwanted or sensitive information from models while keeping useful knowledge intact.  At a broader level, I care about building AI systems that are not only capable, but also dependable and responsible. My long-term goal is to help bridge cutting-edge language model research with safer deployment in high-impact settings.  If you’re interested in trustworthy AI, language model safety, robustness, or reasoning, let’s connect! 🚀"
+affiliations: []
 links:
-  - icon: at-symbol
-    url: mailto:alex.johnson@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
-
+  - icon: "hero/at-symbol"
+    url: "xiangyu@wayne.edu.com"
+    label: "Email"
+  - icon: "brands/github"
+    url: "https://github.com/xzhou98"
+  - icon: "brands/linkedin"
+    url: "https://www.linkedin.com/in/xiangyu-zhou-71086321a/?skipRedirect=true"
+  - icon: "academicons/google-scholar"
+    url: "https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en"
+  - icon: "academicons/orcid"
+    url: "https://orcid.org/0009-0000-0776-8045"
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
-
+  - "Large Language Models"
+  - "Reinforcement Learning"
+  - "Trustworthy AI"
+  - "Supervised Fine-tuning"
+  - "Safety and Robutness in LLMs"
+  - "Multimodal AI"
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
-    summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
-
+  - degree: "PhD in Computer Science"
+    institution: "Wayne State University"
+    start: "2023-08-30"
+    end: ""
+    summary: ""
+  - degree: "Master in Computer Science"
+    institution: "Stevens Institute of Technology"
+    start: "2021-08-30"
+    end: "2023-05-30"
+    summary: ""
+  - degree: "Bachelor of Science in Software Engineering"
+    institution: "Chongqing University of Posts and Telecommunications"
+    start: "2017-09-01"
+    end: "2019-05-30"
+    summary: ""
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
-    summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+  - role: "Graduate Research Assistant"
+    org: "Wayne State University"
+    start: "2023-08-30"
+    end: ""
+    summary: "Conduct research on trustworthy LLMs, focusing on unlearning, safety alignment, and reasoning robustness."
+  - role: "Full Stack Developer, Intern"
+    org: "Shandong Googosoft Co., Ltd."
+    start: "2019-07-01"
+    end: "2019-08-01"
+    summary: "Contributed to the development of a university Asset Management Platform used for financial tracking and asset
 
+      reporting."
 skills:
-  - name: Technical Skills
+  - name: "Technical Skills"
     items:
-      - label: Python
+      - label: "Python"
         level: 5
-      - label: Machine Learning
+      - label: "Machine Learning"
         level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
+      - label: "Java"
+        level: 3
+      - label: "Javescript"
+        level: 3
+      - label: "React"
+        level: 3
+      - label: "React-native"
+        level: 3
+      - label: "HuggingFace"
+        level: 5
+      - label: "PyTorch"
+        level: 3
+      - label: "Github"
+        level: 3
+  - name: "Research & Communication"
     items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
-
+      - label: "Academic Writing"
+        level: 3
+      - label: "Conference Presentations"
+        level: 3
 languages:
-  - name: English
+  - name: "English"
+    level: 3
+    label: "Advanced"
+  - name: "Chinese"
     level: 5
-    label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
-
-awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+    label: "Native"
+awards: []
+ids:
+  orcid: "0009-0000-0776-8045"
+  google_scholar: "qv4-U4oAAAAJ"
+  research_gate: "Xiangyu Zhou"
+  arxiv: "xzhou98"

@@ -26,6 +26,7 @@ abstract: Large Language Models (LLMs), pre-trained on massive text corpora, exh
 summary: This paper helps large language models forget sensitive and unwanted data without over-forgetting general data.
 
 tags:
+  - Accepted by AAAI as Oral
   - Large Language Models Unlearning
 
 # Display this page in the Featured widget?

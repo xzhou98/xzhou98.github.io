@@ -19,9 +19,6 @@ publication_types: ["article"]
 publication: ""
 publication_short: ""
 links:
-  - type: preprint
-    provider: arxiv
-    id: 2402.13459
   - type: code
     url: https://github.com/xzhou98/GBTL-attack
 featured: false

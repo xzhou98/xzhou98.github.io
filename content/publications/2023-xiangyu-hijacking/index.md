@@ -17,9 +17,6 @@ publication_types: ["article"]
 publication: ""
 publication_short: ""
 links:
-  - type: preprint
-    provider: arxiv
-    id: 2311.09948
   - type: code
     url: https://github.com/xzhou98/Hijacking-LLMs-GGI 
 featured: false

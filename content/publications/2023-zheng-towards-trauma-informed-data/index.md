@@ -18,8 +18,8 @@ hugoblox:
 publication_types:
   - paper-conference
 publication: Adjunct Proceedings of the 36th Annual ACM Symposium on User
-  Interface Software and Technology (UIST-23)
-publication_short: ""
+  Interface Software and Technology 
+publication_short: "UIST-23"
 links:
   - type: source
     url: http://dx.doi.org/10.1145/3586182.3616689

@@ -46,7 +46,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: '[**Illustration of the proposed TIF framework**](image.png)'
+  caption: 'Illustration of the proposed TIF framework.'
   focal_point: ''
   preview_only: false
 ---

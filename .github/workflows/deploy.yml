@@ -7,9 +7,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
+# Workflow-level defaults; deploy job must also list what it needs (job permissions replace these).
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -68,10 +69,13 @@ jobs:
   deploy:
     needs: [config, build]
     if: needs.config.outputs.deploy-host == 'github-pages'
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    # Job permissions replace workflow permissions completely — include everything deploy-pages needs.
+    # Without contents/actions read, the deploy step cannot download the Pages artifact from the build job.
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
     # Deploy to the github-pages environment
     environment:
       name: github-pages

@@ -9,7 +9,7 @@ authors:
 author_notes:
   - 'Equal contribution'
   - 'Equal contribution'
-date: 2023-11-16T00:00:00Z
+date: "2023-11-16T00:00:00Z"
 hugoblox:
   ids:
     arxiv: 2311.09948

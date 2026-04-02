@@ -11,7 +11,7 @@ authors:
 author_notes:
   - 'Equal contribution'
   - 'Equal contribution'
-date: 2024-2-21T00:00:00Z
+date: "2024-02-21T00:00:00Z"
 hugoblox:
   ids:
     arxiv: 2402.13459

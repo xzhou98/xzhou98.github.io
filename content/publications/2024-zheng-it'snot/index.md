@@ -10,7 +10,7 @@ authors:
   - Michele Parkhill
   - Dongxiao Zhu
   - Douglas Zytko
-date: 2024-5-11T00:00:00Z
+date: "2024-05-11T00:00:00Z"
 hugoblox:
   ids:
     doi: 10.1145/3613904.3642045

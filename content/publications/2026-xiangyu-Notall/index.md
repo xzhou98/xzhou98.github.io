@@ -29,7 +29,7 @@ tags:
   - Large Language Models Unlearning
 
 # Display this page in the Featured widget?
-featured: false
+featured: True
 
 hugoblox:
   ids:

@@ -1,10 +1,22 @@
-/* Links inside the biography block */
-.wg-resume-biography-3 a {
-    color: #2563eb;        /* normal color */
-    text-decoration: none;
-  }
+// /* Links inside the biography block */
+// .wg-resume-biography-3 a {
+//     color: #2563eb;        /* normal color */
+//     text-decoration: none;
+//   }
   
-  .wg-resume-biography-3 a:hover {
-    color: #1d4ed8;        /* hover color */
-    text-decoration: underline;
-  }
+//   .wg-resume-biography-3 a:hover {
+//     color: #4f39f6;        /* hover color */
+//     text-decoration: underline;
+//   }
+
+/* Bio links */
+section#about a,
+.wg-resume-biography-3 a {
+  color: #2563eb;
+  text-decoration: none;
+}
+section#about a:hover,
+.wg-resume-biography-3 a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}

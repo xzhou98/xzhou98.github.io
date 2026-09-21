@@ -5,6 +5,12 @@ summary: ''
 date: 2022-10-24
 type: landing
 
+# Browser tab + og:title for the homepage.
+# `seo.title` is used verbatim, so it does NOT get " | Xiangyu Zhou" appended,
+# and it leaves the navbar brand and subpage titles alone.
+seo:
+  title: 'Xiangyu Zhou | AI Researcher | Wayne State University'
+
 design:
   # Default section spacing
   spacing: '6rem'

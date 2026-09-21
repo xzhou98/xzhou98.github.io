@@ -6,7 +6,7 @@ type: landing
 design:
   spacing: '5rem'
 
-# Note: `username` refers to the user's folder name in `content/authors/`
+# Note: `username` refers to the author's entry in `data/authors/`
 
 # Page sections
 sections:
@@ -18,16 +18,30 @@ sections:
       date_format: 'January 2006'
       # Education or Experience section first?
       is_education_first: false
-  - block: resume-skills
+  - block: markdown
+    id: skills
     content:
-      title: Skills & Hobbies
-      username: me
-  - block: resume-awards
+      title: 'Technical Skills'
+      text: |-
+        **Machine Learning** &nbsp;·&nbsp; Large Language Models &nbsp;·&nbsp; Large Reasoning Models &nbsp;·&nbsp; Trustworthy AI &nbsp;·&nbsp; Agentic AI &nbsp;·&nbsp; Reinforcement Learning &nbsp;·&nbsp; Fine-tuning
+
+        **Programming** &nbsp;·&nbsp; Python &nbsp;·&nbsp; Java &nbsp;·&nbsp; JavaScript
+
+        **Frameworks** &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Hugging Face &nbsp;·&nbsp; React &nbsp;·&nbsp; React Native &nbsp;·&nbsp; Vue
+
+        **Tooling** &nbsp;·&nbsp; Git &nbsp;·&nbsp; Firebase &nbsp;·&nbsp; MySQL &nbsp;·&nbsp; MongoDB
+
+        **Languages** &nbsp;·&nbsp; Chinese (native) &nbsp;·&nbsp; English (fluent)
+    design:
+      columns: '1'
+  - block: markdown
+    id: service
     content:
-      title: Awards
-      username: me
-  - block: resume-languages
-    content:
-      title: Languages
-      username: me
+      title: 'Academic Service'
+      text: |-
+        **Reviewer** &nbsp;·&nbsp; AAAI 2026, 2027 &nbsp;·&nbsp; ICML 2026 &nbsp;·&nbsp; NeurIPS 2026 &nbsp;·&nbsp; ICLR 2027
+
+        **Program Committee** &nbsp;·&nbsp; AAAI 2026
+    design:
+      columns: '1'
 ---

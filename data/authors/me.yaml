@@ -8,104 +8,89 @@ name:
   alternate: "周翔宇"
   pronunciation: ""
   pronouns: "he/him"
-postnominals:
-  - "PhD"
-  - "Candidate"
 status:
   icon: "👨‍💻"
-role: "Graduate Research Assistant"
-bio: >- 
-  Hi there! 👋  I’m a Ph.D. candidate in [Computer Science](https://engineering.wayne.edu/computer-science) at [Wayne State University](https://www.wayne.edu), advised by [Prof. Dongxiao Zhu](https://dongxiaozhu.github.io/), where I spend most of my time studying how to make large language models more trustworthy, robust, and safe. My research sits at the intersection of trustworthy AI, large language model safety, and reasoning, with a focus on understanding how modern models can be manipulated, misaligned, or made to forget in more precise ways.  
-  
-  Since joining the [Trustworthy AI Lab](https://sites.google.com/view/mlpa/mainpage), I have been working on problems such as jailbreak vulnerabilities, adversarial in-context learning, safety alignment, and LLM unlearning. My work explores both the weaknesses of frontier language and reasoning models and practical ways to improve their reliability under real-world conditions.  
-  
-  More recently, I have been studying how reasoning traces and conversational context can steer model behavior, as well as how to align models more effectively without hurting their general usefulness. I am also interested in targeted unlearning: removing unwanted or sensitive information from models while keeping useful knowledge intact.  At a broader level, I care about building AI systems that are not only capable, but also dependable and responsible. My long-term goal is to help bridge cutting-edge language model research with safer deployment in high-impact settings.  
-  
-  If you’re interested in trustworthy AI, language model safety, robustness, or reasoning, let’s connect! 🚀
+role: "Ph.D. Candidate in Computer Science"
+bio: >-
+  I am a Ph.D. candidate in [Computer Science](https://engineering.wayne.edu/computer-science) at
+  [Wayne State University](https://www.wayne.edu), advised by [Prof. Dongxiao Zhu](https://dongxiaozhu.github.io/)
+  in the [Trustworthy AI Lab](https://sites.google.com/view/mlpa/mainpage). I work on making large language
+  and reasoning models safe enough to deploy — specifically on **machine unlearning**, **safety alignment**,
+  and **robustness** under adversarial or multi-turn conversation.
+
+
+  My AAAI-26 oral paper introduces **Targeted Information Forgetting (TIF)**, which unlearns sensitive content
+  at the token level rather than suppressing entire training samples, avoiding the utility collapse that
+  over-forgetting causes. Related work spans adversarial in-context learning, membership-inference calibration,
+  and attention-based unlearning.
+
+
+  In summer 2026 I was an AI/ML engineer intern on LinkedIn's Generative AI team, where I built the group's
+  first reinforcement-learning pipeline for generative candidate retrieval, improving hiring recall by 46.4%
+  in offline evaluation. I serve as a reviewer for AAAI, ICML, NeurIPS, and ICLR.
+
+
+  If you work on LLM safety, unlearning, or reasoning robustness, I would be glad to hear from you. 🚀
 affiliations: []
 links:
   - icon: "hero/at-symbol"
-    url: "xiangyu@wayne.edu.com"
+    url: "mailto:xiangyu@wayne.edu"
     label: "Email"
   - icon: "brands/github"
     url: "https://github.com/xzhou98"
   - icon: "brands/linkedin"
-    url: "https://www.linkedin.com/in/xiangyu-zhou-71086321a/?skipRedirect=true"
+    url: "https://www.linkedin.com/in/xiangyu-zhou-71086321a/"
   - icon: "academicons/google-scholar"
     url: "https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en"
   - icon: "academicons/orcid"
     url: "https://orcid.org/0009-0000-0776-8045"
 interests:
-  - "Large Language Models"
-  - "Reinforcement Learning"
   - "Trustworthy AI"
-  - "Supervised Fine-tuning"
-  - "Safety and Robutness in LLMs"
-  - "Multimodal AI"
+  - "Large Language Models"
+  - "Large Reasoning Models"
+  - "Generative Retrieval"
+  - "Agentic AI"
 education:
-  - degree: "PhD in Computer Science"
+  - degree: "Ph.D. in Computer Science"
     institution: "Wayne State University"
     start: "2023-08-30"
     end: ""
-    summary: ""
-  - degree: "Master in Computer Science"
+    summary: "Advisor: Dr. Dongxiao Zhu. Detroit, Michigan, USA."
+  - degree: "M.S. in Computer Science"
     institution: "Stevens Institute of Technology"
     start: "2021-08-30"
     end: "2023-05-30"
-    summary: ""
-  - degree: "Bachelor of Science in Software Engineering"
+    summary: "Hoboken, New Jersey, USA."
+  - degree: "B.S. in Software Engineering"
     institution: "Chongqing University of Posts and Telecommunications"
     start: "2017-09-01"
-    end: "2019-05-30"
-    summary: ""
+    end: "2021-05-30"
+    summary: "Chongqing, China."
 experience:
+  - role: "AI/ML Engineer, Generative AI (Intern)"
+    org: "LinkedIn Corporation"
+    start: "2026-05-01"
+    end: "2026-08-31"
+    summary: >-
+      Built generative AI models for candidate retrieval in LinkedIn's hiring assistant, improving hiring
+      recall by 46.4% and role fit by 33.3% in offline evaluation through reinforcement learning. Built the
+      team's first RL pipeline for candidate retrieval using LLM-based rewards, and a candidate-profile
+      lookup table that replaced online requests to cut training latency. Implemented constrained decoding
+      to prioritize candidates actively seeking jobs. Mountain View, CA.
   - role: "Graduate Research Assistant"
-    org: "Wayne State University"
+    org: "Trustworthy AI Lab, Wayne State University"
     start: "2023-08-30"
     end: ""
-    summary: "Conduct research on trustworthy LLMs, focusing on unlearning, safety alignment, and reasoning robustness."
-  - role: "Full Stack Developer, Intern"
+    summary: >-
+      Research on trustworthy LLMs, focusing on unlearning, safety alignment, and reasoning robustness.
+      Detroit, MI.
+  - role: "Full Stack Developer (Intern)"
     org: "Shandong Googosoft Co., Ltd."
     start: "2019-07-01"
     end: "2019-08-01"
-    summary: "Contributed to the development of a university Asset Management Platform used for financial tracking and asset
-
-      reporting."
-skills:
-  - name: "Technical Skills"
-    items:
-      - label: "Python"
-        level: 5
-      - label: "Machine Learning"
-        level: 5
-      - label: "Java"
-        level: 3
-      - label: "Javescript"
-        level: 3
-      - label: "React"
-        level: 3
-      - label: "React-native"
-        level: 3
-      - label: "HuggingFace"
-        level: 5
-      - label: "PyTorch"
-        level: 3
-      - label: "Github"
-        level: 3
-  - name: "Research & Communication"
-    items:
-      - label: "Academic Writing"
-        level: 3
-      - label: "Conference Presentations"
-        level: 3
-languages:
-  - name: "English"
-    level: 3
-    label: "Advanced"
-  - name: "Chinese"
-    level: 5
-    label: "Native"
-awards: []
+    summary: >-
+      Contributed to a university Asset Management Platform for financial tracking and asset reporting, and
+      improved front-end reliability by debugging JavaScript interaction issues. Shandong, China.
 ids:
   orcid: "0009-0000-0776-8045"
   google_scholar: "qv4-U4oAAAAJ"

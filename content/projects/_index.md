@@ -3,6 +3,15 @@ title: 'Projects'
 date: 2024-05-19
 type: landing
 
+# Template demo content - hidden from the built site.
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
+
 design:
   # Section spacing
   spacing: '5rem'

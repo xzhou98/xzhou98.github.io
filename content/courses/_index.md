@@ -3,7 +3,17 @@ title: Courses
 summary: My courses
 type: landing
 
+# Template demo content - hidden from the built site.
+build:
+  render: never
+  list: never
+
 cascade:
+  - target:
+      path: '{/courses/**}'
+    build:
+      render: never
+      list: never
   - target:
       path: '{/courses/*/**}'
     type: docs

@@ -1,4 +1,7 @@
 ---
+# Template demo content - hidden from the built site.
+draft: true
+
 title: 'An example conference paper'
 
 # Authors

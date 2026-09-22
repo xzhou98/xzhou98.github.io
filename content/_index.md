@@ -9,7 +9,7 @@ type: landing
 # `seo.title` is used verbatim, so it does NOT get " | Xiangyu Zhou" appended,
 # and it leaves the navbar brand and subpage titles alone.
 seo:
-  title: 'Xiangyu Zhou | AI Researcher | Wayne State University'
+  title: 'Xiangyu Zhou - Large Language Model & Agentic AI'
 
 design:
   # Default section spacing

@@ -272,6 +272,22 @@ section#about a:hover,
 .dark .announcement__dot { background: var(--color-primary-400); }
 
 /* --------------------------------------------------------------------------
+   1d. Featured Publications figures
+   The block uses `fill_image: false` (content/_index.md) so wide paper figures
+   are scaled to fit instead of cropped. Put them on a white panel with a little
+   breathing room, like a figure on a page, instead of the theme's grey gradient.
+   White in dark mode too: paper figures are drawn on white.
+   -------------------------------------------------------------------------- */
+#papers .aspect-\[16\/9\] {
+  background: #fff;
+}
+
+#papers .aspect-\[16\/9\] img {
+  box-sizing: border-box;
+  padding: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
    2. Section entrance animation
    Sections fade and rise once as they scroll into view. `.reveal` is added by
    layouts/_partials/hooks/head-end/reveal.html only when IntersectionObserver

@@ -74,6 +74,8 @@ sections:
     design:
       view: article-grid
       columns: 2
+      # Show whole paper figures (scaled to fit) instead of cropping them to 16:9.
+      fill_image: false
   - block: collection
     content:
       title: Recent Publications

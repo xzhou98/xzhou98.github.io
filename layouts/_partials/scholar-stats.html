@@ -1,0 +1,18 @@
+{{/* Google Scholar metrics (citations, h-index, i10-index), rendered under the
+     social icons in the homepage profile column. Numbers come from data/scholar.yaml.
+     Included from layouts/_partials/hbx/blocks/resume-biography-3/block.html. */}}
+{{ with site.Data.scholar }}
+<div class="scholar-stats">
+  <ul class="scholar-stats__list" aria-label="Google Scholar metrics">
+    {{ range .metrics }}
+    <li class="scholar-stat">
+      <span class="scholar-stat__value">{{ lang.FormatNumber 0 .value }}</span>
+      <span class="scholar-stat__label">{{ .label }}</span>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="scholar-stats__source">
+    Per <a href="{{ .profile_url }}" target="_blank" rel="noopener">Google Scholar</a>{{ with .as_of }}, {{ time.Format "January 2006" (time.AsTime .) }}{{ end }}.
+  </p>
+</div>
+{{ end }}

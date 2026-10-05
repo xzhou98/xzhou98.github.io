@@ -26,18 +26,104 @@ section#about a:hover,
   text-decoration: underline;
 }
 
-@media (prefers-color-scheme: dark) {
-  section#about a,
-  #section-resume-biography-3 .prose a,
-  .wg-resume-biography-3 a {
-    color: var(--color-primary-400);
-  }
-  section#about a:hover,
-  #section-resume-biography-3 .prose a:hover,
-  .wg-resume-biography-3 a:hover {
-    color: var(--color-primary-300);
-  }
+/* The theme switches dark mode with a `.dark` class on <html> (driven by the
+   navbar toggle), not with the OS media query, so key off the class. */
+.dark section#about a,
+.dark #section-resume-biography-3 .prose a,
+.dark .wg-resume-biography-3 a {
+  color: var(--color-primary-400);
 }
+.dark section#about a:hover,
+.dark #section-resume-biography-3 .prose a:hover,
+.dark .wg-resume-biography-3 a:hover {
+  color: var(--color-primary-300);
+}
+
+/* --------------------------------------------------------------------------
+   1b. Google Scholar metrics
+   Rendered under the social icons in the homepage profile column by
+   layouts/_partials/scholar-stats.html; numbers live in data/scholar.yaml.
+   Sized to fit three across the narrow (md:col-span-4) column.
+   -------------------------------------------------------------------------- */
+.scholar-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  margin-top: 2rem;
+}
+
+.scholar-stats__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scholar-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-gray-300, #d1d5db);
+  background: var(--color-white, #fff);
+  transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.scholar-stat:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-400);
+  box-shadow: 0 8px 24px -12px var(--color-primary-500);
+}
+
+.scholar-stat__value {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary-700);
+}
+
+.scholar-stat__label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray-500, #6b7280);
+}
+
+.scholar-stats__source {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-gray-500, #6b7280);
+}
+
+.scholar-stats__source a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.scholar-stats__source a:hover {
+  color: var(--color-primary-600);
+}
+
+.dark .scholar-stat {
+  border-color: var(--color-zinc-700, #3f3f46);
+  background: var(--color-zinc-900, #18181b);
+}
+.dark .scholar-stat__value { color: var(--color-primary-300); }
+.dark .scholar-stat__label,
+.dark .scholar-stats__source { color: var(--color-gray-400, #9ca3af); }
+.dark .scholar-stats__source a:hover { color: var(--color-primary-300); }
 
 /* --------------------------------------------------------------------------
    2. Section entrance animation

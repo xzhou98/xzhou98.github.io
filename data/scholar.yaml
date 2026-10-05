@@ -1,0 +1,12 @@
+# Google Scholar metrics shown on the homepage (block: scholar-stats).
+# Google Scholar has no public API, so these are a dated snapshot.
+# To update: copy the "All" column from your profile and bump `as_of`.
+profile_url: "https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en"
+as_of: "2026-10-05"
+metrics:
+  - label: "Citations"
+    value: 229
+  - label: "h-index"
+    value: 7
+  - label: "i10-index"
+    value: 4

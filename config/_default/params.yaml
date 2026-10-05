@@ -4,7 +4,7 @@ hugoblox:
     name: Xiangyu Zhou
     type: person
     tagline: Graduate Research Assistant | Wayne State University
-    description: Xiangyu Zhou is currently advancing as a Ph.D. candidate in the Department of Computer Science at Wayne State University.
+    description: Homepage of Xiangyu Zhou, Ph.D. candidate in Computer Science at Wayne State University, researching trustworthy AI, robustness and alignment of LLMs, large reasoning models, and agentic AI.
   theme:
     mode: system
     pack: default

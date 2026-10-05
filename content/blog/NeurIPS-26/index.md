@@ -1,7 +1,7 @@
 ---
 title: 🎉 Paper accepted by NeurIPS-26
 summary: Our paper 'Towards Mitigating Deceptive Safety Alignment in Large Reasoning Models' has been accepted to the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS-26), to be held in Atlanta.
-date: 2026-10-07
+date: 2026-10-05
 image:
   caption: ""
 cover:

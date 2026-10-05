@@ -1,7 +1,8 @@
 {{/* LOCAL OVERRIDE of HugoBlox resume-biography-3, copied verbatim from the version
      pinned in go.mod (github.com/HugoBlox/kit/modules/blox @ 76023f9461b1).
-     The only change is the `scholar-stats.html` include marked LOCAL CHANGE.
-     If you upgrade the blox module, re-copy the upstream file and re-add that line. */}}
+     The only changes are two partial includes marked LOCAL CHANGE:
+     `scholar-stats.html` (left column) and `announcement.html` (right column).
+     If you upgrade the blox module, re-copy the upstream file and re-add those lines. */}}
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -338,7 +339,10 @@
 
       {{/* Right Column: Flexible span */}}
       <div class="md:col-span-8">
-        
+
+        {{/* LOCAL CHANGE: job-market callout, configured under `announcement` in content/_index.md. */}}
+        {{ partial "announcement.html" (dict "page" $page "content" $content) }}
+
         {{/* Bio Section */}}
         {{ $bio_content := "" }}
         {{ $bio_override_raw := index $content "text" }}

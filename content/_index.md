@@ -21,6 +21,14 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
       text: ''
+      # Job-market callout above "About Me" (layouts/_partials/announcement.html).
+      # Set enable: false to hide it once you've accepted an offer.
+      announcement:
+        enable: true
+        text: >-
+          **On the job market.** I'm seeking **Research Scientist** positions starting in **2028**,
+          and **research internships** for **2027**.
+          [Get in touch](mailto:xiangyu@wayne.edu) — I'd be glad to talk.
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV

@@ -27,6 +27,7 @@ abstract: In-context learning (ICL) has emerged as a powerful paradigm leveragin
 summary: This work introduces a novel transferable attack against In-Context-Learning to hijack LLMs to generate the target response or jailbreak.  We also propose a defense strategy against hijacking attacks through the use of extra clean demos, which enhances the robustness of LLMs during ICL.
 
 tags:
+  - Accepted by ECML-PKDD-2026
   - Large Language Models 
   - In-context Learning Attack
 

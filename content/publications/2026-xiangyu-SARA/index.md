@@ -26,7 +26,7 @@ abstract: Large Reasoning Models (LRMs) are commonly trained with reinforcement 
 summary: Reasoning models hide unsafe thoughts behind safe answers; we propose a metric DSAR to measure it and safety alignment method SARA to mitigate it.
 
 tags:
-  - Accepted by NeurIPS
+  - Accepted by NeurIPS-2026
   - Deceptive Safety Alignment
 
 # Display this page in the Featured widget?

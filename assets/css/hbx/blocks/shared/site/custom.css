@@ -1,5 +1,5 @@
 /* Site-wide custom styles. Loaded automatically by the theme: layouts/_partials/css.html
-   concatenates every .css file under assets/css/hbx/blocks/shared/ after its own CSS and runs
+   concatenates .css files in SUBFOLDERS of assets/css/hbx/blocks/shared/ after its own CSS and runs
    the result through Tailwind. (assets/scss/custom.scss is NOT loaded by this theme version.)
    Careful: a glob written with star-slash in a comment here would close the comment early. */
 

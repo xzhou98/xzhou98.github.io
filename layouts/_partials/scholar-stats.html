@@ -5,7 +5,7 @@
      The whole group is a single link to the Scholar profile. The real numbers are in
      the HTML; the count-up below only animates them, so no-JS visitors and crawlers
      still see the correct values. */}}
-{{ with site.Data.scholar }}
+{{ with hugo.Data.scholar }}
 {{ $as_of := "" }}{{ with .as_of }}{{ $as_of = time.Format "January 2006" (time.AsTime .) }}{{ end }}
 {{ $summary := slice }}{{ range .metrics }}{{ $summary = $summary | append (printf "%s %s" (lang.FormatNumber 0 .value) .label) }}{{ end }}
 <div class="scholar-stats">

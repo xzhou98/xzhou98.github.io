@@ -10,6 +10,19 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   0. Page background guard
+   The theme sets the page background with a Tailwind utility, which lives in a
+   CSS layer. Un-layered CSS (e.g. the "Flash Player - flash emulator" Chrome
+   extension injects `body { background: #f8f8f8 }` into every site) beats any
+   layered rule, which left dark mode with a light page. This rule is un-layered
+   and more specific than `body`, so the theme's own colour always wins. It reads
+   the theme's variable, so it follows light/dark mode automatically.
+   -------------------------------------------------------------------------- */
+html body {
+  background-color: var(--hb-color-background);
+}
+
+/* --------------------------------------------------------------------------
    1. Links
    Previously hardcoded to #2563eb (Tailwind blue-600), which clashed with the
    theme's indigo `primary` palette. Use the theme token so links always match

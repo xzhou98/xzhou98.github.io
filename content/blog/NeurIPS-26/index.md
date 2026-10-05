@@ -1,22 +1,10 @@
 ---
-title: 🎉Paper accepted by NeurIPS-26
-summary: Excited to share our paper 'Towards Mitigating Deceptive Safety Alignment in Large Reasoning Models' has been accepted to the The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS-26), to be held in Atlanta.
+title: 🎉 Paper accepted by NeurIPS-26
+summary: Our paper 'Towards Mitigating Deceptive Safety Alignment in Large Reasoning Models' has been accepted to the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS-26), to be held in Atlanta.
 date: 2026-10-07
 image:
   caption: ""
 cover:
-  image: https://images.unsplash.com/photo-1557682250-33bd709cbe85?q=80&w=1600
-  position:
-    x: 50
-    y: 40
-  overlay:
-    enabled: true
-    type: gradient
-    opacity: 0.4
-    gradient: bottom
-  fade:
-    enabled: true
-    height: 80px
   icon:
     name: ✨
 authors:
@@ -26,6 +14,17 @@ tags:
   - NeurIPS
 content_meta:
   trending: false
-status: draft
+status: published
 ---
-<!-- Tip: open with the why, then show results, code, and next steps. -->
+
+Our paper **"Towards Mitigating Deceptive Safety Alignment in Large Reasoning Models"** has been accepted to
+**NeurIPS 2026**. This is joint work with Saleh Zare Zade, Rafi Ibn Sultan, Alexander Kotov, and my advisor
+Dongxiao Zhu.
+
+Large reasoning models are typically trained with rewards on their final answers, leaving the reasoning
+trace largely unsupervised. We show this produces *deceptive safety alignment*: a safe-looking final answer
+that sits on top of unsafe reasoning. We introduce **DSAR**, a metric that quantifies this inconsistency, and
+**SARA**, an RL method that rewards safety-aware reasoning as well as safe answers — reducing deceptive
+alignment under both standard prompting and prefilling attacks while preserving helpfulness.
+
+[Paper](https://arxiv.org/abs/2609.36254) · [Code](https://github.com/xzhou98/SARA) · [Publication page](/publications/2026-xiangyu-sara/)

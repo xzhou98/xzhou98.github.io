@@ -14,23 +14,17 @@ role: "Ph.D. Candidate in Computer Science"
 bio: >-
   I am a Ph.D. candidate in [Computer Science](https://engineering.wayne.edu/computer-science) at
   [Wayne State University](https://www.wayne.edu), advised by [Prof. Dongxiao Zhu](https://dongxiaozhu.github.io/)
-  in the [Trustworthy AI Lab](https://sites.google.com/view/mlpa/mainpage). I work on making large language
-  and reasoning models safe enough to deploy — specifically on **machine unlearning**, **safety alignment**,
-  and **robustness** under adversarial or multi-turn conversation.
+  in the [Trustworthy AI Lab](https://sites.google.com/view/mlpa/mainpage). My research focuses on
+  **trustworthy AI**: making AI systems **robust** and **aligned** so they can be deployed safely.
 
 
-  My AAAI-26 oral paper introduces **Targeted Information Forgetting (TIF)**, which unlearns sensitive content
-  at the token level rather than suppressing entire training samples, avoiding the utility collapse that
-  over-forgetting causes. Related work spans adversarial in-context learning, membership-inference calibration,
-  and attention-based unlearning.
+  I work across large language models (LLMs), large reasoning models (LRMs), and agentic AI, spanning
+  safety alignment, fine-tuning, reinforcement learning, in-context learning, and machine unlearning. My work
+  has been published at venues including NeurIPS, ICLR, CVPR, and AAAI (oral). In industry, I worked on
+  generative retrieval as an AI/ML engineer intern at LinkedIn.
 
 
-  In summer 2026 I was an AI/ML engineer intern on LinkedIn's Generative AI team, where I built the group's
-  first reinforcement-learning pipeline for generative candidate retrieval, improving hiring recall by 46.4%
-  in offline evaluation. I serve as a reviewer for AAAI, ICML, NeurIPS, and ICLR.
-
-
-  If you work on LLM safety, unlearning, or reasoning robustness, I would be glad to hear from you. 🚀
+  I am always happy to connect with others working on trustworthy AI. Feel free to reach out!
 affiliations: []
 links:
   - icon: "hero/at-symbol"

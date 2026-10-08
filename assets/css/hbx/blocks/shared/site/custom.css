@@ -318,10 +318,11 @@ section#about a:hover,
 .hbb-section:not(#section-resume-biography-3) .container.max-w-\[500px\] { max-width: 75rem; }
 
 /* Alternating section backgrounds so neighbouring sections read as separate
-   bands: Featured Publications and Talks are tinted, Recent Publications and
-   News stay on the page background. */
+   bands: Featured Publications, Talks and News are tinted; Recent Publications
+   and Awards stay on the page background. */
 #papers,
-#talks {
+#talks,
+#news {
   background-color: color-mix(in srgb, var(--color-primary-500) 6%, var(--hb-color-background));
 }
 
@@ -348,7 +349,8 @@ section#about a:hover,
 }
 /* `section.hbb-section#…` so this outranks the rule above, whose `:not(#…)`
    counts as an ID selector. */
-section.hbb-section#recent-publications > .home-section-bg + div {
+section.hbb-section#recent-publications > .home-section-bg + div,
+section.hbb-section#awards > .home-section-bg + div {
   max-width: 58rem;
   padding-inline: 0;
 }
@@ -409,6 +411,55 @@ section.hbb-section#recent-publications > .home-section-bg + div {
 }
 #recent-publications .space-y-3 > * { margin-block: 0 !important; }
 .dark #recent-publications .pub-list-item { border-color: var(--color-gray-700, #374151); }
+
+/* --------------------------------------------------------------------------
+   1e-3. Awards & Recognition (layouts/_partials/hbx/blocks/honors/block.html)
+   Same column as Recent Publications (58rem, no inset) so titles and rules line
+   up; year in a fixed left column, title + optional note on the right.
+   -------------------------------------------------------------------------- */
+.awards-wrap {
+  width: calc(100% - 3rem);
+  max-width: 58rem;
+  margin: 1.25rem auto 0;
+}
+.awards-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.award {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-gray-200, #e5e7eb);
+}
+.award:last-child { border-bottom: 1px solid var(--color-gray-200, #e5e7eb); }
+@media (min-width: 640px) {
+  .award { grid-template-columns: 8rem minmax(0, 1fr); gap: 1.5rem; align-items: baseline; }
+}
+.award__year {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary-600);
+}
+.award__body { display: flex; flex-direction: column; gap: 0.2rem; }
+.award__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-gray-900, #111827);
+}
+.award__note {
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: var(--color-gray-600, #4b5563);
+}
+.dark .award { border-color: var(--color-gray-700, #374151); }
+.dark .award__year { color: var(--color-primary-400); }
+.dark .award__title { color: var(--color-white, #fff); }
+.dark .award__note { color: var(--color-gray-400, #9ca3af); }
 
 /* --------------------------------------------------------------------------
    1f. "Experience & Education" cards (layouts/_partials/background-cards.html)

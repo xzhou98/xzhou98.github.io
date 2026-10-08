@@ -98,6 +98,11 @@ sections:
     design:
       view: article-grid
       columns: 2
+  - block: honors
+    id: awards
+    content:
+      title: Awards & Recognition
+      # Entries live in data/awards.yaml
   - block: collection
     id: news
     content:

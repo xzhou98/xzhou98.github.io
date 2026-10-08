@@ -1,0 +1,9 @@
+# Awards & Recognition, shown on the homepage (block: honors,
+# layouts/_partials/hbx/blocks/honors/block.html).
+# List newest first. `note` is optional: one short line shown under the title.
+- year: "2025–2026"
+  title: Graduate Student Professional Travel Award
+  note: ""
+- year: "2023–2024"
+  title: Thomas C. Rumble Fellowship Award
+  note: ""

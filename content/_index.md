@@ -11,9 +11,8 @@ type: landing
 seo:
   title: "Xiangyu Zhou's Homepage | LLM & Agentic AI"
 
-design:
-  # Default section spacing (top and bottom padding of every section)
-  spacing: '3rem'
+# Note: section spacing is set in assets/css/hbx/blocks/shared/site/custom.css
+# (this theme version ignores a page-level `design.spacing`).
 
 sections:
   - block: resume-biography-3
@@ -67,6 +66,7 @@ sections:
     id: papers
     content:
       title: Featured Publications
+      text: Selected work on the safety, alignment, and robustness of large language and reasoning models.
       filters:
         folders:
           - publications
@@ -80,7 +80,7 @@ sections:
     id: recent-publications
     content:
       title: Recent Publications
-      text: ''
+      text: My name is highlighted. See also [Google Scholar](https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en) and my [CV](/uploads/CV_XZhou.pdf).
       filters:
         folders:
           - publications
@@ -91,6 +91,7 @@ sections:
     id: talks
     content:
       title: Recent & Upcoming Talks
+      text: Conference presentations and invited talks.
       filters:
         folders:
           - events

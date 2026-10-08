@@ -295,6 +295,11 @@ section#about a:hover,
    `design.spacing` in content/_index.md; the profile block's own extra inner
    padding (up to 8rem) is trimmed here so About Me sits closer to the navbar.
    -------------------------------------------------------------------------- */
+/* Section spacing. The theme pads every section 6rem top and bottom (and this
+   version ignores `design.spacing` in content/_index.md), so set it here. */
+.hbb-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+#section-resume-biography-3 { padding-bottom: 1.5rem; }
+
 #section-resume-biography-3 .max-w-7xl { max-width: 90rem; }
 #section-resume-biography-3 .resume-biography {
   padding-top: 1rem;
@@ -305,7 +310,7 @@ section#about a:hover,
 
 /* Recent Publications is a text list, so it is kept a little narrower (1024px)
    than the card sections (1200px) for comfortable line lengths. */
-#recent-publications .max-w-3xl { max-width: 64rem; }
+#recent-publications .max-w-3xl { max-width: 58rem; }
 
 /* When a collection has a single item (e.g. one talk) the theme narrows the
    container to 500px. Keep it at the full section width, so a lone card takes
@@ -326,7 +331,7 @@ section#about a:hover,
    and aligned exactly with the left edge of the section's content:
      card sections: content box = min(100% - 3rem, 75rem), text inset 2rem
                     (1.25rem from 1280px up, matching the theme's xl:px-5)
-     Recent Publications: content box = min(100% - 3rem, 64rem), no inset.
+     Recent Publications: content box = min(100% - 3rem, 58rem), no inset.
    The gap between title and content is cut from ~3.5rem (5rem for Recent
    Publications) to about 1rem.
    -------------------------------------------------------------------------- */
@@ -344,7 +349,7 @@ section#about a:hover,
 /* `section.hbb-section#…` so this outranks the rule above, whose `:not(#…)`
    counts as an ID selector. */
 section.hbb-section#recent-publications > .home-section-bg + div {
-  max-width: 64rem;
+  max-width: 58rem;
   padding-inline: 0;
 }
 
@@ -367,6 +372,26 @@ section.hbb-section#recent-publications > .home-section-bg + div {
 .dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child::before {
   background: linear-gradient(90deg, var(--color-primary-400), var(--color-secondary-400));
 }
+
+/* Optional one-line description under a section title (`text:` in content/_index.md). */
+.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-gray-600, #4b5563);
+}
+.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p { color: var(--color-gray-400, #9ca3af); }
+.dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a { color: var(--color-primary-400); }
+
+/* Shorter Featured Publications cards: paper figures are wide, so a 16:9 image
+   box was mostly empty space. Use a wider box and slightly tighter padding. */
+#papers [class*="aspect-[16/9]"] { aspect-ratio: 2.3 / 1; }
+#papers [role=article] .p-8 { padding: 1.5rem; }
 
 /* Title-to-content gap. */
 .hbb-section:not(#section-resume-biography-3) .container.py-5 { padding-top: 1.25rem; }

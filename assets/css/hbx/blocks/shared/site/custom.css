@@ -23,6 +23,18 @@ html body {
 }
 
 /* --------------------------------------------------------------------------
+   0b. List-page headings (/publications/, /blog/, /events/ ...)
+   The theme sets these to 60px (lg:text-6xl), much larger than typical academic
+   sites (~36-40px) and than the homepage section titles (36px). 40px on desktop,
+   scaling down to 30px on phones.
+   -------------------------------------------------------------------------- */
+h1.lg\:text-6xl {
+  font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* --------------------------------------------------------------------------
    1. Links
    Previously hardcoded to #2563eb (Tailwind blue-600), which clashed with the
    theme's indigo `primary` palette. Use the theme token so links always match
@@ -295,10 +307,15 @@ section#about a:hover,
    `design.spacing` in content/_index.md; the profile block's own extra inner
    padding (up to 8rem) is trimmed here so About Me sits closer to the navbar.
    -------------------------------------------------------------------------- */
-/* Section spacing. The theme pads every section 6rem top and bottom (and this
+/* Homepage scope: every homepage-only rule below is prefixed with
+   `.page-body:has(> #section-resume-biography-3) >`. The profile section only
+   exists on the homepage, so these rules never touch /experience/ or other
+   landing pages (an unscoped title rule once enlarged all Experience-page text).
+
+   Section spacing. The theme pads every section 6rem top and bottom (and this
    version ignores `design.spacing` in content/_index.md), so set it here. */
-.hbb-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-#section-resume-biography-3 { padding-bottom: 1.5rem; }
+.page-body:has(> #section-resume-biography-3) > .hbb-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.page-body:has(> #section-resume-biography-3) > #section-resume-biography-3.hbb-section { padding-bottom: 1.5rem; }
 
 #section-resume-biography-3 .max-w-7xl { max-width: 90rem; }
 #section-resume-biography-3 .resume-biography {
@@ -306,7 +323,7 @@ section#about a:hover,
   padding-bottom: 1rem;
 }
 
-.hbb-section:not(#section-resume-biography-3) .max-w-screen-lg { max-width: 75rem; }
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) .max-w-screen-lg { max-width: 75rem; }
 
 /* Recent Publications is a text list, so it is kept a little narrower (1024px)
    than the card sections (1200px) for comfortable line lengths. */
@@ -315,14 +332,12 @@ section#about a:hover,
 /* When a collection has a single item (e.g. one talk) the theme narrows the
    container to 500px. Keep it at the full section width, so a lone card takes
    one column of the two-column grid like everywhere else. */
-.hbb-section:not(#section-resume-biography-3) .container.max-w-\[500px\] { max-width: 75rem; }
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) .container.max-w-\[500px\] { max-width: 75rem; }
 
 /* Alternating section backgrounds so neighbouring sections read as separate
-   bands: Featured Publications, Talks and News are tinted; Recent Publications
-   and Awards stay on the page background. */
-#papers,
-#talks,
-#news {
+   bands. Based on position (every 2nd, 4th, 6th... section after the profile is
+   tinted), so it stays correct if sections are reordered in content/_index.md. */
+.page-body:has(> #section-resume-biography-3) > section.hbb-section:nth-of-type(even) {
   background-color: color-mix(in srgb, var(--color-primary-500) 6%, var(--hb-color-background));
 }
 
@@ -336,7 +351,7 @@ section#about a:hover,
    The gap between title and content is cut from ~3.5rem (5rem for Recent
    Publications) to about 1rem.
    -------------------------------------------------------------------------- */
-.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div {
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div {
   align-items: flex-start;
   width: calc(100% - 3rem);
   max-width: 75rem;
@@ -345,24 +360,24 @@ section#about a:hover,
   gap: 0;
 }
 @media (min-width: 1280px) {
-  .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div { padding-inline: 1.25rem; }
+  .page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div { padding-inline: 1.25rem; }
 }
 /* `section.hbb-section#…` so this outranks the rule above, whose `:not(#…)`
    counts as an ID selector. */
-section.hbb-section#recent-publications > .home-section-bg + div,
-section.hbb-section#awards > .home-section-bg + div {
+.page-body:has(> #section-resume-biography-3) > section.hbb-section#recent-publications > .home-section-bg + div,
+.page-body:has(> #section-resume-biography-3) > section.hbb-section#awards > .home-section-bg + div {
   max-width: 58rem;
   padding-inline: 0;
 }
 
-.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child {
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child {
   margin-bottom: 0;
   font-size: clamp(1.75rem, 1.25rem + 1.6vw, 2.25rem); /* 28px on phones -> 36px on desktop */
   line-height: 1.15;
   letter-spacing: -0.02em;
   text-align: left;
 }
-.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child::before {
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child::before {
   content: '';
   display: block;
   width: 2.5rem;
@@ -371,24 +386,24 @@ section.hbb-section#awards > .home-section-bg + div {
   border-radius: 9999px;
   background: linear-gradient(90deg, var(--color-primary-600), var(--color-secondary-600));
 }
-.dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child::before {
+.dark .page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > div:first-child::before {
   background: linear-gradient(90deg, var(--color-primary-400), var(--color-secondary-400));
 }
 
 /* Optional one-line description under a section title (`text:` in content/_index.md). */
-.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p {
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p {
   margin: 0.5rem 0 0;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-gray-600, #4b5563);
 }
-.hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a {
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a {
   color: var(--color-primary-600);
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
-.dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p { color: var(--color-gray-400, #9ca3af); }
-.dark .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a { color: var(--color-primary-400); }
+.dark .page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p { color: var(--color-gray-400, #9ca3af); }
+.dark .page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) > .home-section-bg + div > p a { color: var(--color-primary-400); }
 
 /* Shorter Featured Publications cards: paper figures are wide, so a 16:9 image
    box was mostly empty space. Use a wider box and slightly tighter padding. */
@@ -396,7 +411,7 @@ section.hbb-section#awards > .home-section-bg + div {
 #papers [role=article] .p-8 { padding: 1.5rem; }
 
 /* Title-to-content gap. */
-.hbb-section:not(#section-resume-biography-3) .container.py-5 { padding-top: 1.25rem; }
+.page-body:has(> #section-resume-biography-3) > .hbb-section:not(#section-resume-biography-3) .container.py-5 { padding-top: 1.25rem; }
 #recent-publications .container.mt-16 { margin-top: 1rem; }
 
 /* Recent Publications: thin rule between entries, like a bibliography. The theme

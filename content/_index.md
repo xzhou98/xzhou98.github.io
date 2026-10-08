@@ -63,47 +63,6 @@ sections:
   #   design:
   #     columns: '1'
   - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      text: Selected work on the safety, alignment, and robustness of large language and reasoning models.
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-      # Show whole paper figures (scaled to fit) instead of cropping them to 16:9.
-      fill_image: false
-  - block: collection
-    id: recent-publications
-    content:
-      title: Recent Publications
-      text: My name is highlighted. See also [Google Scholar](https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en) and my [CV](/uploads/CV_XZhou.pdf).
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      text: Conference presentations and invited talks.
-      filters:
-        folders:
-          - events
-    design:
-      view: article-grid
-      columns: 2
-  - block: honors
-    id: awards
-    content:
-      title: Awards & Recognition
-      # Entries live in data/awards.yaml
-  - block: collection
     id: news
     content:
       title: Recent News
@@ -129,5 +88,46 @@ sections:
     design:
       # Choose a layout view
       view: article-grid
-      columns: 2
+      columns: 3
+  - block: collection
+    id: papers
+    content:
+      title: Featured Publications
+      text: Selected work on the safety, alignment, and robustness of large language and reasoning models.
+      filters:
+        folders:
+          - publications
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 3
+      # Show whole paper figures (scaled to fit) instead of cropping them to 16:9.
+      fill_image: false
+  - block: collection
+    id: recent-publications
+    content:
+      title: Recent Publications
+      text: My name is highlighted. See also [Google Scholar](https://scholar.google.com/citations?user=qv4-U4oAAAAJ&hl=en) and my [CV](/uploads/CV_XZhou.pdf).
+      filters:
+        folders:
+          - publications
+        exclude_featured: false
+    design:
+      view: citation
+  - block: honors
+    id: awards
+    content:
+      title: Awards & Recognition
+      # Entries live in data/awards.yaml
+  - block: collection
+    id: talks
+    content:
+      title: Recent & Upcoming Talks
+      text: Conference presentations and invited talks.
+      filters:
+        folders:
+          - events
+    design:
+      view: article-grid
+      columns: 3
 ---

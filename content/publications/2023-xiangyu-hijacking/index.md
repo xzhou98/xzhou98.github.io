@@ -36,7 +36,7 @@ links:
     url: https://link.springer.com/chapter/10.1007/978-3-032-37673-2_13
   - type: code
     url: https://github.com/xzhou98/Hijacking-LLMs-GGI
-featured: True
+featured: False
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

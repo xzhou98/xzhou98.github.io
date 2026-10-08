@@ -318,6 +318,17 @@ section#about a:hover,
 .page-body:has(> #section-resume-biography-3) > #section-resume-biography-3.hbb-section { padding-bottom: 1.5rem; }
 
 #section-resume-biography-3 .max-w-7xl { max-width: 90rem; }
+
+/* Profile right column: soften the width difference between the About Me text
+   and the other blocks (job-market callout, Experience & Education cards,
+   Interests). The theme caps only the bio text at reading width (`prose`, ~65ch),
+   which made it visibly shorter. Deliberately not equal: on a wide screen the
+   bio widens a little (~680 -> 816px) and the other blocks narrow a little
+   (~950 -> 912px). On narrower screens everything simply fills the column. */
+#section-resume-biography-3 .md\:col-span-8 > * { max-width: 57rem; }
+#section-resume-biography-3 .md\:col-span-8 .prose { max-width: 51rem; }
+/* The theme's biography CSS also caps the text block itself at 680px. */
+#section-resume-biography-3 .md\:col-span-8 .bio-text { max-width: none; }
 #section-resume-biography-3 .resume-biography {
   padding-top: 1rem;
   padding-bottom: 1rem;

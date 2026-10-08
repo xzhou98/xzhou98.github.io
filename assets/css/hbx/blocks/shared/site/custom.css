@@ -288,13 +288,34 @@ section#about a:hover,
 }
 
 /* --------------------------------------------------------------------------
-   1e. Page width
-   Slightly narrower side margins on wide screens: profile section 1280 -> 1440px,
-   publication sections 1024 -> 1200px. No effect below those widths.
+   1e. Page width and spacing
+   Profile section 1280 -> 1440px. Every collection section (Featured / Recent
+   Publications, Talks, News) gets the same 1200px width, including the citation
+   list and the theme's narrower card lists. Section top/bottom padding is set by
+   `design.spacing` in content/_index.md; the profile block's own extra inner
+   padding (up to 8rem) is trimmed here so About Me sits closer to the navbar.
    -------------------------------------------------------------------------- */
 #section-resume-biography-3 .max-w-7xl { max-width: 90rem; }
-#papers .max-w-screen-lg,
-#section-collection .max-w-screen-lg { max-width: 75rem; }
+#section-resume-biography-3 .resume-biography {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.hbb-section:not(#section-resume-biography-3) .max-w-screen-lg,
+#recent-publications .max-w-3xl { max-width: 75rem; }
+
+/* When a collection has a single item (e.g. one talk) the theme narrows the
+   container to 500px. Keep it at the full section width, so a lone card takes
+   one column of the two-column grid like everywhere else. */
+.hbb-section:not(#section-resume-biography-3) .container.max-w-\[500px\] { max-width: 75rem; }
+
+/* Alternating section backgrounds so neighbouring sections read as separate
+   bands: Featured Publications and Talks are tinted, Recent Publications and
+   News stay on the page background. */
+#papers,
+#talks {
+  background-color: color-mix(in srgb, var(--color-primary-500) 6%, var(--hb-color-background));
+}
 
 /* --------------------------------------------------------------------------
    1f. "Experience & Education" cards (layouts/_partials/background-cards.html)

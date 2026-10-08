@@ -12,8 +12,8 @@ seo:
   title: "Xiangyu Zhou's Homepage | LLM & Agentic AI"
 
 design:
-  # Default section spacing
-  spacing: '6rem'
+  # Default section spacing (top and bottom padding of every section)
+  spacing: '3rem'
 
 sections:
   - block: resume-biography-3
@@ -77,6 +77,7 @@ sections:
       # Show whole paper figures (scaled to fit) instead of cropping them to 16:9.
       fill_image: false
   - block: collection
+    id: recent-publications
     content:
       title: Recent Publications
       text: ''
@@ -94,7 +95,8 @@ sections:
         folders:
           - events
     design:
-      view: card
+      view: article-grid
+      columns: 2
   - block: collection
     id: news
     content:
@@ -120,8 +122,6 @@ sections:
       order: desc
     design:
       # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
+      view: article-grid
+      columns: 2
 ---

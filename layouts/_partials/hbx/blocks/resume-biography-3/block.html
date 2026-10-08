@@ -1,8 +1,9 @@
 {{/* LOCAL OVERRIDE of HugoBlox resume-biography-3, copied verbatim from the version
      pinned in go.mod (github.com/HugoBlox/kit/modules/blox @ 76023f9461b1).
-     The only changes are two partial includes marked LOCAL CHANGE:
-     `scholar-stats.html` (left column) and `announcement.html` (right column).
-     If you upgrade the blox module, re-copy the upstream file and re-add those lines. */}}
+     Changes are marked LOCAL CHANGE: two added includes, `scholar-stats.html` (left column)
+     and `announcement.html` (right column), and the Education grid replaced by
+     `background-cards.html`. If you upgrade the blox module, re-copy the upstream file
+     and re-apply those three changes. */}}
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -409,81 +410,9 @@
           {{ end }}
         {{ end }}
 
-        {{/* Education Section */}}
-        {{ $education_raw := $profile.education }}
-        {{ $education := slice }}
-        {{ if reflect.IsSlice $education_raw }}
-          {{ $education = $education_raw }}
-        {{ end }}
-        {{ if gt (len $education) 0 }}
-        <div class="mb-16">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $education_heading := i18n "education" }}
-            {{ $education_heading_raw := index $headings "education" }}
-            {{ if eq (printf "%T" $education_heading_raw) "string" }}
-              {{ $education_heading_raw = strings.TrimSpace $education_heading_raw }}
-              {{ if ne $education_heading_raw "" }}
-                {{ $education_heading = $education_heading_raw }}
-              {{ end }}
-            {{ end }}
-            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $education_heading | markdownify }}</h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {{ range $education }}
-            {{ if reflect.IsMap . }}
-            {{ $degree := "" }}
-            {{ $degreeRaw := index . "degree" | default (index . "area") }}
-            {{ if ne $degreeRaw nil }}{{ $degree = printf "%v" $degreeRaw }}{{ end }}
-            {{ $year := "" }}
-            {{ with index . "year" }}{{ $year = printf "%v" . }}{{ end }}
-            {{ $start := "" }}
-            {{ with index . "start" }}{{ $start = printf "%v" . }}{{ end }}
-            {{ $end := "" }}
-            {{ with index . "end" }}{{ $end = printf "%v" . }}{{ end }}
-            {{ $institution := "" }}
-            {{ with index . "institution" }}{{ $institution = printf "%v" . }}{{ end }}
-            {{ $icon := "" }}
-            {{ $iconRaw := index . "icon" }}
-            {{ if eq (printf "%T" $iconRaw) "string" }}
-              {{ $icon = $iconRaw }}
-            {{ end }}
-            <div class="group h-full flex flex-col bg-gradient-to-br from-white/90 to-primary-50/30 dark:from-gray-800/90 dark:to-primary-900/20 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 backdrop-blur-md">
-              <div class="flex gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 rounded-full flex items-center justify-center shadow-md">
-                  {{ if $icon }}
-                    {{ partial "functions/get_icon" (dict "name" $icon "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-                  {{ else }}
-                    {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-                  {{ end }}
-                </div>
-                <div class="flex-1 flex-grow">
-                  {{ if $degree }}
-                  <p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    {{ $degree }}
-                  </p>
-                  {{ end }}
-                  {{ if $year }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{{ $year }}</p>
-                  {{ else if $start }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
-                      {{ $start }}
-                      {{ if $end }}<br>{{ $end }}{{ end }}
-                    </p>
-                  {{ end }}
-                  {{ if $institution }}
-                    <p class="text-gray-700 dark:text-gray-300 text-base">{{ $institution }}</p>
-                  {{ end }}
-                </div>
-              </div>
-            </div>
-            {{ end }}
-            {{ end }}
-          </div>
-        </div>
-        {{ end }}
+        {{/* LOCAL CHANGE: the theme's Education grid is replaced by one row of four cards
+             (two most recent roles + two highest degrees). Original grid removed here. */}}
+        {{ partial "background-cards.html" (dict "profile" $profile) }}
 
         {{/* Interests Section */}}
         {{ $interests_raw := $profile.interests }}

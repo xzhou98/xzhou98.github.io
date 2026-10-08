@@ -288,6 +288,120 @@ section#about a:hover,
 }
 
 /* --------------------------------------------------------------------------
+   1e. Page width
+   Slightly narrower side margins on wide screens: profile section 1280 -> 1440px,
+   publication sections 1024 -> 1200px. No effect below those widths.
+   -------------------------------------------------------------------------- */
+#section-resume-biography-3 .max-w-7xl { max-width: 90rem; }
+#papers .max-w-screen-lg,
+#section-collection .max-w-screen-lg { max-width: 75rem; }
+
+/* --------------------------------------------------------------------------
+   1f. "Experience & Education" cards (layouts/_partials/background-cards.html)
+   Two most recent roles + two highest degrees: 4 across on wide screens,
+   2 on tablets, 1 on phones.
+   -------------------------------------------------------------------------- */
+.bg-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 640px)  { .bg-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .bg-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.bg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.9), color-mix(in srgb, var(--color-primary-50) 60%, transparent));
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+}
+.bg-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-200);
+  box-shadow: 0 12px 24px -12px var(--color-primary-500);
+}
+
+.bg-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.4rem;
+  border-radius: 9999px;
+  background: var(--color-white, #fff);
+  box-shadow: 0 0 0 1px var(--color-gray-200, #e5e7eb), 0 2px 4px rgb(0 0 0 / 0.06);
+}
+.bg-card__svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--color-primary-600);
+}
+
+.bg-card__kind {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+}
+.bg-card--education .bg-card__kind,
+.bg-card--education .bg-card__svg { color: var(--color-secondary-600); }
+
+.bg-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-gray-900, #111827);
+}
+.bg-card__org {
+  margin: 0;
+  font-size: 0.925rem;
+  line-height: 1.4;
+  color: var(--color-gray-700, #374151);
+}
+.bg-card__dates {
+  margin: auto 0 0;
+  padding-top: 0.35rem;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-gray-500, #6b7280);
+}
+
+.bg-cards__more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--color-primary-600);
+  text-decoration: none;
+}
+.bg-cards__more:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+
+.dark .bg-card {
+  background: linear-gradient(135deg, rgb(31 41 55 / 0.9), color-mix(in srgb, var(--color-primary-900) 25%, transparent));
+}
+.dark .bg-card:hover { border-color: var(--color-primary-800); }
+.dark .bg-card__icon { background: var(--color-gray-800, #1f2937); box-shadow: 0 0 0 1px var(--color-gray-700, #374151); }
+.dark .bg-card__svg,
+.dark .bg-card__kind { color: var(--color-primary-400); }
+.dark .bg-card--education .bg-card__kind,
+.dark .bg-card--education .bg-card__svg { color: var(--color-secondary-400); }
+.dark .bg-card__title { color: var(--color-white, #fff); }
+.dark .bg-card__org { color: var(--color-gray-300, #d1d5db); }
+.dark .bg-card__dates { color: var(--color-gray-400, #9ca3af); }
+.dark .bg-cards__more { color: var(--color-primary-400); }
+
+/* --------------------------------------------------------------------------
    2. Section entrance animation
    Sections fade and rise once as they scroll into view. `.reveal` is added by
    layouts/_partials/hooks/head-end/reveal.html only when IntersectionObserver
